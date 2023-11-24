@@ -315,6 +315,12 @@ if __name__ == "__main__":
                 filt_counter += 1
                 cur_handler = handle_filt if allOutput else None
 
+            # Check intrachromosomal criteria - Filter
+            if isIntraChrom(r1, r2) is False:
+                interactionType = "FILT"
+                filt_counter += 1
+                cur_handler = handle_filt if allOutput else None
+
             # By default pair is valid
             if interactionType == None:
                 interactionType = "VI"
