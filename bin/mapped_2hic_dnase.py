@@ -310,10 +310,10 @@ if __name__ == "__main__":
                 cur_handler = handle_single if allOutput else None
 
             # Check Distance criteria - Filter
-            if minDist is not None and dist is not None and dist < int(minDist):
-                interactionType = "FILT"
-                filt_counter += 1
-                cur_handler = handle_filt if allOutput else None
+            # if minDist is not None and dist is not None and dist < int(minDist):
+                # interactionType = "FILT"
+                # filt_counter += 1
+                # cur_handler = handle_filt if allOutput else None
 
             # Check intrachromosomal criteria - Filter
             if isIntraChrom(r1, r2) is False:
